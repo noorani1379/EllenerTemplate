@@ -1,0 +1,140 @@
+.navbar{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    position: fixed;
+    width: 100%;
+    height: 12vh;
+    z-index: 10;
+    //background:transparent;
+    // background-color: #212121;
+    &-items{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 40%;
+        font-size: 2rem;  
+    }
+    
+}
+/* ul li.navbar__item:last-child{
+    background-color: $color--secondary;
+    padding: 7px 15px;
+    border-radius: 100px;
+ } */
+
+
+.container__h{
+    display: flex;
+    height: 100vh;
+    justify-content: space-between;
+
+    z-index: 2;
+}
+.graphic{
+     position: relative;
+     width: 50%; 
+     overflow: hidden;
+
+     &--square{
+        position: absolute;
+        width: 80rem;
+        height: 75rem;
+        background-color: $color-thirdiary-blue;
+        transform:  rotate(45deg);
+        // border-radius: 15%;
+        z-index: 2;
+        left: 21rem;
+
+        top: -9rem;
+        border-radius: 10%;
+        animation: border 2.5s  linear infinite;
+    }
+    &--imgs{
+      position: relative;
+      width: 100%;
+      height: 100%;
+      &--gear{
+        width: 15rem;
+        position: absolute;
+        bottom: 2.5rem;
+        right: 19rem;
+        z-index: 4;
+    }
+  
+  }
+}
+
+.text-box{
+    margin: 0rem 7rem;
+}
+.social-btn{
+    font-size: 2rem;
+    color: aliceblue;
+    display: flex;
+    justify-content: space-between;
+    
+
+    &__insta{
+        padding: 1.1rem;
+        border-radius: 110%;
+        color: azure;
+        background-color: #202020f1;
+        margin: 0 1rem;
+        text-align: center;
+    }
+    &__facebook{
+        padding: 1.2rem;
+        border-radius: 110%;
+        color: azure;
+        background-color: #202020f1;
+        margin: 0 1rem;
+        text-align: center;
+    }
+    
+}
+.logo{
+    width: 15rem;
+    
+    
+    &-img{
+    max-width: 100%;
+    }
+}
+
+.gear-imgs{
+    position: relative;
+    width: 100%;
+    height: 100%;
+
+}
+.gear-1{
+    max-width: 10rem;
+    position: absolute;
+    bottom: 5rem;
+    left: 40%;
+    z-index: 3;
+}
+.gear-2{
+    width: 15rem;
+    position: absolute;
+    bottom: 2.5rem;
+    right: 10rem;
+    z-index: 4;
+}
+
+
+.header__circle {
+    height: 50px;
+    width: 50px;
+    border-radius: 50px;
+    position: absolute;
+    pointer-events: none;
+    background: #55b9f3;
+    box-shadow:  20px 20px 60px #489dcf, 
+               -20px -20px 60px #62d5ff;
+    transform: translate(-50%, -50%);
+    animation: blow 4s linear infinite;
+}
+

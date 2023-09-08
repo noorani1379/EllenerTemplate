@@ -1,0 +1,129 @@
+.brands{
+	
+	&__text{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		grid-gap: 1rem;
+	}
+
+	&__cube{
+		display: flex;
+		align-items: center;
+		text-align: center;
+		justify-content: space-between;
+		margin-top: 7rem;
+		position: relative;
+	}
+
+	&__scene{
+		width: 33rem;
+  		height: 50rem;
+		perspective: 400px;
+		margin-right: 8rem;
+	}
+}
+
+.cube{
+	width: 33rem;
+  	height: 50rem;
+	position: relative;
+	transform-style: preserve-3d ;
+	display: flex;
+	justify-content: center;
+	transition: transform 1s;
+	transform: translateZ(-16.5rem);
+
+	&__text{
+		padding-bottom: 4rem;
+	}
+
+	&__face{
+		position: absolute;
+		width: 33rem;
+  		height: 45rem;
+		border: 2px solid black;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		align-items: stretch;
+		border-radius: 10px;
+		background: linear-gradient(10deg,
+		 rgba(114,137,218,1) 26%,
+		 rgba(0,173,181,1) 57%,
+		  rgba(0,222,232,0.5) 73%,
+		   rgba(0,255,245,0.3) 81%,
+		    rgba(0,255,245,0) 96%),
+		     url(../../../assets/img/elin.jpg);
+		// background: rgba($color--secondary-dark, 0.90);
+		&-1{
+			position: absolute;
+			width: 33rem;
+			height: 33rem;
+			border: 2px solid black;
+		}
+		
+		&--front{
+			transform: rotateY( 0deg) translateZ(16.5rem); 
+			// background: rgba($color--secondary-dark, 0.95);
+			background-size: 180%;
+			background-repeat: no-repeat;
+		}
+		&--right{
+			transform: rotateY( 90deg) translateZ(16.5rem); 
+			// background: rgba($color--secondary, 0.95);
+			background-size: 180%;
+			background-repeat: no-repeat;
+		}
+		&--back{
+			transform: rotateY(180deg) translateZ(16.5rem);
+			// background: rgba($color--secondary-light, 0.95);
+			background-size: 180%;
+			background-repeat: no-repeat;
+		}
+		&--left{
+			transform: rotateY(-90deg) translateZ(16.5rem); 
+			// background: rgba($color--secondary-light-1, 0.95);
+			background-size: 180%;
+			background-repeat: no-repeat;
+		}
+		&--top{
+			transform: rotateX( 90deg) translateZ(16.5rem);
+			background: rgba($color--secondary-light-2, 0.3);
+			
+		}
+		&--bottom{
+			transform: rotateX(-90deg) translateZ(28.5rem);
+			background: rgba($color--secondary-light-2, 0.3);
+		}
+	}
+}
+
+.cube.show-front  { transform: translateZ(-16.5rem) rotateY(  0deg); }
+.cube.show-right  { transform: translateZ(-16.5rem) rotateY( -90deg); }
+.cube.show-back   { transform: translateZ(-16.5rem) rotateY(-180deg); }
+.cube.show-left   { transform: translateZ(-16.5rem) rotateY(  90deg); }
+.cube.show-top    { transform: translateZ(-25rem) rotateX( -45deg); }
+.cube.show-bottom { transform: translateZ(-25rem) rotateX( 45deg); }
+
+
+label { margin-right: 20px; }
+
+
+.cube__shadow{
+	bottom: 181px;
+	border: none;
+	height: 11rem;
+	width: 40rem;
+	filter: blur(21px);
+	background-color: rgba($color: #000000, $alpha: 0.8);
+	box-shadow: 0 0 30px rgba(0,0,0,1);
+	opacity: 0.5;
+	// perspective: 900px;
+	left: -20rem;
+	
+}
+
+.perspective{
+	perspective: 1000px;
+}

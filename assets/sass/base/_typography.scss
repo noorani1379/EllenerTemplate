@@ -1,0 +1,41 @@
+.h-1{
+    font-size: 7.5rem;
+    font-weight: 900;
+    letter-spacing: 7px;
+    
+}
+
+.h-2{
+    font-size: 4.5rem;
+    font-weight: bold; 
+
+    .h-2 > .project__text {
+        text-align: left;
+    }
+}
+
+.h-3{
+    font-size: 1.9rem;
+    font-weight: 300;
+    margin: 2.5rem auto;
+}
+
+.h-4{
+    font-size: 2rem;
+    font-weight: 300;
+    &--header{
+        font-size: 5rem;
+        font-weight: 200;
+    }
+}
+
+.h-6{
+    font-size: 2rem;
+    font-weight: 300;
+}
+
+
+
+.gap{
+    margin-bottom: 2rem;
+}

@@ -1,0 +1,126 @@
+.btn{
+    background-color: $color-thirdiary-dark;
+    border-radius: 100px;
+    width: max-content;
+    height: auto;
+    padding: 1rem 2.5rem;
+    margin: 1.5rem 0;
+    letter-spacing: 3px;
+    // align-self: start;
+    font-weight: 400;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: all .5s;
+    position: relative;
+    text-align: center;
+    box-sizing: unset;
+
+
+    &:hover{
+        background-color: $color-thirdiary-orange;
+        &>a{
+            color: $color-light;
+        }
+    }
+
+        &::before{
+        content: '';
+        position: absolute;
+        border-radius: 100px;
+        left: -2.5px;
+        top: -2.5px;
+        background: linear-gradient(20deg, rgba(0,255,245,1) 11%, rgba(57,62,70,1) 37%, rgba(114,137,218,1) 62%, rgba(0,173,181,1) 79%, rgba(0,222,232,1) 91%);
+        background-size: 400%;
+        width: calc(100% + 5px);
+        height: calc(100% + 5px);
+        z-index: -1;
+        animation: glower 20s linear infinite;
+    
+    }
+
+
+    &__text{
+        color: white;
+        font-size: 1.8rem;
+        font-weight: 400;
+        padding: 1rem 2.5rem;
+        cursor: pointer;
+        transition: 0.5s ease;
+        letter-spacing: normal;
+    }
+    
+    &__float{
+        position: relative;
+        padding: 2rem 5rem;
+        display: block;
+        width: 20rem;
+        overflow: hidden;
+        border-radius: 40px;
+        background: $color-thirdiary-blue-2;
+        box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.5);
+        z-index: 3;
+        font-size: 1.8rem;
+        margin: 3rem 0;
+
+        &:hover::after , &:hover::before{
+            height: 0%;
+            // transition:  2s;
+        }
+
+    }
+
+    &__float::after ,&__float::before{
+        content: '';
+        width: 40rem;
+        height: 40rem;
+        position: absolute;
+        top: -39rem;
+        left: -50%;
+        transition: 1.5s;
+    }
+    &__float::after{
+        border-radius: 40%;
+        background: rgba($color-thirdiary-dark, 0.5);
+        // background-color: green;
+        animation: btn 10s linear infinite;
+    }
+    &__float::before{
+        border-radius: 45%;
+        background: rgba($color-thirdiary-dark, 1);
+        // background-color: blue;
+        animation: btn 5s linear infinite;
+    }
+    
+}
+
+
+
+
+
+.box {
+    position: relative;
+    height:  400px;
+    width: 380px;
+    display: block;
+    background: linear-gradient(0deg, black, #444444);
+  }
+  
+  
+  
+  @keyframes glower {
+    0% {
+      background-position: 0 0;
+    }
+    
+    50% {
+      background-position: 400% 0;
+    }
+    
+    100% {
+      background-position: 0 0;
+    }
+  }
+
+
+
+  

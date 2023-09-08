@@ -1,0 +1,93 @@
+.background{
+	&-c{
+		min-width: 30%;
+		position: relative;
+	}
+	transform:  rotate(45deg);
+	border-radius: 5rem;
+	position: absolute;
+	width: 62rem;
+	height: 62rem;
+
+	&-step{
+		background-color: $color--secondary-dark;
+		right: -25%;
+		transform-origin: 44%;
+		position: absolute;
+	}
+	&-step2{
+		background-color: $color--secondary-dark;
+		left: -196%;
+		transform-origin: 14%;
+		position: absolute;
+	}
+	
+}
+.left{
+	// background-color: $color-thirdiary-blue-2;
+	right: 54%;
+	transform-origin: 77%;
+}
+.right{
+	// background-color: $color-thirdiary-blue-1;
+	left: 161%;
+	transform-origin: 40%;
+
+}
+
+.neon{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	display: block;
+	box-sizing: border-box;
+}
+
+.neon:nth-child(1)
+{
+  transform:rotate(0deg);
+}
+
+.neon:nth-child(2)
+{
+  transform:rotate(90deg);
+}
+
+.neon:nth-child(3)
+{
+  transform:rotate(180deg);
+}
+
+.neon:nth-child(4)
+{
+  transform:rotate(270deg);
+  
+}
+
+.neon::before
+{
+  content: '';
+  position: absolute;
+  width:98%;
+  height: 5px;
+  background: red;
+  animation: animate 4s linear infinite;
+}
+
+.color{
+	&--1{
+		background-color: $color-thirdiary-blue-1;
+	}
+	&--2{
+		background-color: $color-thirdiary-blue-2;
+	}
+	&--3{
+		background-color: $color-thirdiary-blue-1;
+	}
+	&--4{
+		background-color: $color-thirdiary-blue;
+	}
+}
+

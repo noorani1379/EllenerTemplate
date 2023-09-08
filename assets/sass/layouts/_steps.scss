@@ -1,0 +1,172 @@
+.steps{
+	display: flex;
+	flex-direction: column;
+	// margin: 15rem;
+	// width: 80%;
+	margin-top: 50rem;
+	position: relative;
+
+	&__top{
+		// top: 0;
+		display: flex;
+		flex-direction: column;
+		// position: relative;
+		
+		&--text{
+			width: 70%;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			height: 50rem;
+		}
+	}
+	&__bottom{
+		// bottom: 0;
+		display: flex;
+		flex-direction: column;
+		margin-top: 16rem;
+		margin-left: 35rem;
+		align-items: flex-start;
+		// position: relative;
+		&--text{
+			width: 70%;
+			margin-top: 12rem;
+		}
+
+	}
+}
+
+.step{
+	display: flex;
+	flex-direction: column;
+	text-align: left;
+	align-items: center;
+	margin-top: 5rem;
+	// position: absolute;
+	transform: translateY(-13rem);
+	
+	&__icon{
+		width: 10rem;
+		height: 10rem;
+		transform: translate(-10%, -17%);
+		fill: white;
+		opacity: 0.7;
+		
+	}
+	&__title{
+		font-size: 2.8rem;
+		margin: 1rem 0;
+		letter-spacing: 2px;
+		opacity: 0.9;
+	}
+	&__desc{
+		width: 70%;
+		font-size: 2.5rem;
+		font-weight: 200;
+		// text-align: justify;
+		width: 25rem;
+		line-height: 3rem;
+		color: $color-thirdiary-dark;
+		margin: 1rem;
+	}
+
+	&--2{
+	
+		transform: translate(-30%, -13rem);
+	}
+	&--5{
+		transform: translate(53%, -13rem);
+	}
+
+	&__face{
+		width: 35rem;
+		height: 25rem;
+		padding: 5rem;
+		align-items: center;
+		justify-content: center;
+		text-align: center;
+		box-shadow: 1px 3px 15px rgba(rgb(45, 118, 146),.7);
+		transition: all 1s;
+		&--1{
+			background-color: $color-thirdiary-blue;
+			z-index: 2;
+			
+		}
+		&--2{
+			background-color: $color-thirdiary-light;
+			z-index: 1;
+			transform: translateY(-25rem);
+			height: 22rem;
+			// padding: 1rem;
+		}
+	}
+	&:hover .step__face--1{
+		transform: translatey(-3rem);
+		box-shadow: 1px 0px 15px rgba(rgb(45, 118, 146),.7);
+		
+	}
+	&--1{
+		&:hover .step__face--1{
+			background-image:#ff0000;background-image:  
+			radial-gradient(at 40% 20%, hsla(28,100%,74%,1) 0, transparent 50%),  
+			radial-gradient(at 80% 0%, hsla(189,100%,56%,1) 0, transparent 50%),  
+			radial-gradient(at 0% 50%, hsla(355,85%,93%,1) 0, transparent 50%),  
+			radial-gradient(at 80% 50%, hsla(340,100%,76%,1) 0, transparent 50%),  
+			radial-gradient(at 0% 100%, hsla(22,100%,77%,1) 0, transparent 50%),  
+			radial-gradient(at 80% 100%, hsla(242,100%,70%,1) 0, transparent 50%),  
+			radial-gradient(at 0% 0%, hsla(343,100%,76%,1) 0, transparent 50%);
+		}
+	}
+	&--2{
+		&:hover .step__face--1{
+			background-image:#ff0000;background-image:  
+			radial-gradient(at 80% 50%, hsla(252,100%,76%,1) 0, transparent 50%),  
+			radial-gradient(at 0% 100%, hsla(294,100%,77%,1) 0, transparent 50%),  
+			radial-gradient(at 80% 100%, hsla(154,100%,70%,1) 0, transparent 50%),  
+			radial-gradient(at 0% 0%, hsla(255,100%,76%,1) 0, transparent 50%);
+		}
+	}
+	&--3{
+		&:hover .step__face--1{
+			background-image:#ff0000;background-image:  
+			radial-gradient(at 80% 50%, hsla(202,100%,76%,1) 0, transparent 50%),  
+			radial-gradient(at 0% 100%, hsla(244,100%,77%,1) 0, transparent 50%),  
+			radial-gradient(at 80% 100%, hsla(104,100%,70%,1) 0, transparent 50%),  
+			radial-gradient(at 0% 0%, hsla(205,100%,76%,1) 0, transparent 50%);
+		}
+	}
+	&--4{
+		&:hover .step__face--1{
+			background-image:#ff0000;background-image:  
+			radial-gradient(at 80% 50%, hsla(137,100%,76%,1) 0, transparent 50%),  
+			radial-gradient(at 0% 100%, hsla(179,100%,77%,1) 0, transparent 50%),  
+			radial-gradient(at 80% 100%, hsla(39,100%,70%,1) 0, transparent 50%),  
+			radial-gradient(at 0% 0%, hsla(140,100%,76%,1) 0, transparent 50%);
+		}
+	}
+	&--5{
+		&:hover .step__face--1{
+			background-image:#ff0000;background-image:  
+			radial-gradient(at 80% 50%, hsla(251,100%,76%,1) 0, transparent 50%),  
+			radial-gradient(at 0% 100%, hsla(293,100%,77%,1) 0, transparent 50%),  
+			radial-gradient(at 80% 100%, hsla(153,100%,70%,1) 0, transparent 50%),  
+			radial-gradient(at 0% 0%, hsla(254,100%,76%,1) 0, transparent 50%);
+		}
+	}
+	&--6{
+		&:hover .step__face--1{
+			background-image:#3a88fe;background-image:  
+			radial-gradient(at 30% 2%, hsla(334,86%,68%,1) 0, transparent 48%),  
+			radial-gradient(at 80% 50%, hsla(266,100%,76%,1) 0, transparent 50%),  
+			radial-gradient(at 0% 100%, hsla(308,100%,77%,1) 0, transparent 50%),  
+			radial-gradient(at 80% 100%, hsla(168,100%,70%,1) 0, transparent 50%),  
+			radial-gradient(at 0% 0%, hsla(269,100%,76%,1) 0, transparent 50%);
+		}
+	}
+
+	&:hover .step__face--2{
+		display: block;
+		
+		transform: translatey(-3rem);
+	}
+}

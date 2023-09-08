@@ -1,0 +1,28 @@
+.grid-centering{
+    width: 100%;
+    display: grid;
+    place-items: center;
+}
+.flex-centering{
+    display: flex;
+    flex-direction: column;
+    // align-items: center;
+    justify-content: center;
+}
+
+.container{
+    margin: 10rem 3rem;
+    display: flex;
+    justify-content: space-between;
+    // align-items: center;
+    text-align: center;
+    &__projects{
+        max-width: 70%;
+        text-align: left;
+
+    }
+    &__brands{
+        align-items: center;
+	    justify-content: center;
+    }
+}

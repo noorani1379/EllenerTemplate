@@ -1,0 +1,44 @@
+.projects{
+	margin-top: 10rem;
+
+	&__text{
+		width: 98%;
+	}
+	&__img{
+		width: 25rem;
+		height: 25rem;
+		float: right;
+		transform: translate(-30%, -10%);
+	}
+
+	&__stats{
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		&--container{
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			margin-top: 8rem;
+			width: 70%;
+		}
+		
+		&--icon{
+			width: 4.5rem;
+			height: 4.5rem;
+			margin-right: 3rem;
+			fill: $color-thirdiary-blue;
+			transform: translateY(10%);
+		}
+		&--text{
+			font-size: 2.5rem;
+			letter-spacing: 1px;
+			font-weight: 100;
+		}
+		&--text > p {
+			font-size: 2rem;
+			font-weight: 200;
+		}
+	}
+}

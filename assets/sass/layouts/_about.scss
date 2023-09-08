@@ -1,0 +1,204 @@
+.about{
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  margin: 0 -5rem 20rem -5rem ;
+  &__text{
+    z-index: 3;
+    position: absolute;
+    transform: translate(125%, -88%);
+    top: 4%;
+  }
+  &__slide{
+    &-1{
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      padding: 8rem;
+      &--text{
+        width: 50%;
+        font-size: 2rem;
+        text-align: left;
+        line-height: 3rem;
+      
+      }
+      &--text .h-2{
+        font-size: 3rem;
+        margin-bottom: 2rem;
+        
+      }
+      &--text li{
+        list-style: circle;
+        margin-left: 3rem;
+      }
+    }
+    &-2{
+      margin: 8rem 12rem 3rem 12rem;
+      font-size: 2rem;
+      // width: 60%;
+    }
+  }
+}
+
+
+.swiper {
+  width: 80rem;
+  height: 40rem;
+  margin-top: 5rem;
+  margin-bottom: 1.5rem;
+  /* From https://css.glass */
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(3.5px);
+  -webkit-backdrop-filter: blur(3.5px);
+  border: 1px solid rgba(255, 255, 255, 0.27);
+  
+}
+
+
+@mixin translate50
+{
+  -webkit-transform: translate(-50, -50%);
+  -ms-transform: translate(-50, -50%);
+  -o-transform: translate(-50, -50%);
+  transform: translate(-50, -50%);
+}
+
+@mixin roundedCorners
+{
+  -webkit-border-radius: 50%; 
+  -moz-border-radius: 50%; 
+  border-radius: 50%;
+}
+
+@mixin rotateBase
+{
+  -webkit-transform: rotate3d(-1, 1, 0, 0deg);
+  -ms-transform: rotate3d(-1, 1, 0, 0deg);
+  -o-transform: rotate3d(-1, 1, 0, 0deg);
+  transform: rotate3d(-1, 1, 0, 0deg);
+}
+
+@mixin rotateRight
+{
+  -webkit-transform: rotate3d(-1, 1, 0, 30deg);
+  -ms-transform: rotate3d(-1, 1, 0, 30deg);
+  -o-transform: rotate3d(-1, 1, 0, 30deg);
+  transform: rotate3d(-1, 1, 0, 30deg);
+}
+
+@mixin rotateLeft
+{
+  -webkit-transform: rotate3d(-1, 1, 0, -30deg);
+  -ms-transform: rotate3d(-1, 1, 0, -30deg);
+  -o-transform: rotate3d(-1, 1, 0, -30deg);
+  transform: rotate3d(-1, 1, 0, -30deg);
+}
+
+// n is number of stars generated
+@function generateStars ($n)
+{ 
+  $value: '#{0} #{random(2000)}px #{random(2000)}px #FFF';
+
+  @for $i from 2 through $n
+  {
+    $value: '#{$value} , #{random(2000)}px #{random(2000)}px #FFF';
+  }
+
+  @return unquote($value);
+}
+
+$stars-small:  generateStars(700);
+$stars-medium: generateStars(200);
+$stars-big:    generateStars(100);
+
+
+#stars-container
+{
+  
+  height: 150%;
+  width: 100%;
+  background: $color-thirdiary-dark;
+  overflow: hidden;
+  @include translate50;
+  position: absolute;
+}
+    
+#stars
+{
+  width: 1px;
+  height: 1px;
+  background: transparent;
+  box-shadow: $stars-small;
+  animation : animateStars 28.5s ease-in-out infinite;
+  @include roundedCorners;
+
+  &::after
+  {
+    content: " ";
+    position: absolute;
+    margin: auto;
+    top: 0; left: 0; right: 0; bottom: 0;
+    width: 1px;
+    height: 1px;
+    background: transparent;
+    box-shadow: $stars-small;
+    @include roundedCorners;
+  }
+}
+    
+#stars2
+{
+  width: 2px;
+  height: 2px;
+  background: transparent;
+  box-shadow: $stars-medium;
+  animation : animateStars 30s ease-in-out infinite;
+  @include roundedCorners;
+    
+  &::after
+  {
+    content: " ";
+    position: absolute;
+    margin: auto;
+    top: 0; left: 0; right: 0; bottom: 0;
+    width: 2px;
+    height: 2px;
+    background: transparent;
+    box-shadow: $stars-medium;
+    @include roundedCorners;
+  }
+}
+    
+#stars3
+{
+  width: 3px;
+  height: 3px;
+  background: transparent;
+  box-shadow: $stars-big;
+  animation : animateStars 31.5s ease-in-out infinite;
+  @include roundedCorners;
+    
+  &:after
+  {
+    content: " ";
+    position: absolute;
+    margin: auto;
+    top: 0; left: 0; right: 0; bottom: 0;
+    width: 3px;
+    height: 3px;
+    background: transparent;
+    box-shadow: $stars-big;
+    @include roundedCorners;
+  }
+}
+
+@keyframes animateStars
+{
+  0%{@include rotateBase;}
+  25%{@include rotateRight;}
+  50%{@include rotateBase;}
+  75%{@include rotateLeft;}
+  100%{@include rotateBase;}
+}
